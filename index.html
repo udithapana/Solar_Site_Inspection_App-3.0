@@ -7,7 +7,13 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Site Inspection">
 <meta name="theme-color" content="#16233D">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
@@ -493,11 +499,11 @@
 // guide provided alongside this file for exact steps.
 // ==================================================================
 const firebaseConfig = {
-  apiKey: "AIzaSyCdIAC7VYnp9lbKtOW5vdJ452MTAgkYLSw",
-  authDomain: "solar-system-inspection.firebaseapp.com",
-  projectId: "solar-system-inspection",
-  messagingSenderId: "428101181089",
-  appId: "1:428101181089:web:5a300e6f892e91a7961ae0"
+  apiKey: "PASTE_YOUR_API_KEY_HERE",
+  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
+  projectId: "PASTE_YOUR_PROJECT_ID",
+  messagingSenderId: "PASTE_YOUR_SENDER_ID",
+  appId: "PASTE_YOUR_APP_ID"
 };
 // Photos are NOT uploaded to Firebase Storage on purpose - Storage now
 // requires linking a billing card (Google policy change, Feb 2026), even
@@ -506,7 +512,7 @@ const firebaseConfig = {
 // Firestore, which stays on the free Spark plan with no card needed.
 // Photos continue to work exactly as before: download, zip, share sheet,
 // or the data-package Import flow - nothing about that changed.
-const FIREBASE_CONFIGURED = firebaseConfig.apiKey !== "AIzaSyCdIAC7VYnp9lbKtOW5vdJ452MTAgkYLSw";
+const FIREBASE_CONFIGURED = firebaseConfig.apiKey !== "PASTE_YOUR_API_KEY_HERE";
 let fbApp, fbAuth, fbDb, currentUser = null;
 if(FIREBASE_CONFIGURED){
   try{
